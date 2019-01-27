@@ -49,10 +49,14 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # <./myproj/project_1.xpr> in the current working folder.
 
 set list_projs [get_projects -quiet]
-if { $list_projs eq "" } {
-   create_project sha1_overlay sha1_overlay -part xc7z020clg400-1
-   set_property BOARD_PART www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
-}
+#if { $list_projs eq "" } {
+   create_project -force sha1_overlay sha1_overlay -part xc7z020clg400-1
+ #  if { [lindex argv 0] eq "-z1"}{
+ #  set_property BOARD_PART www.digilentinc.com:pynq-z1:part0:1.0 [current_project]}
+ #  else if{[lindex argv 0] eq "-z2"}{
+       set_property BOARD_PART tul.com.tw:pynq-z2:part0:1.0 [current_project]
+#}
+#}
 
 #Add IP Repo
 set_property "ip_repo_paths" [file normalize [pwd]/../ip] [get_filesets sources_1]

@@ -1,0 +1,81 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mehmet' on host 'mehmet-work' (Linux_x86_64 version 4.15.0-43-generic) on Sun Jan 27 13:55:08 EST 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/mehmet/Repo-work/sha1_pynq/ip'
+INFO: [HLS 200-10] Opening project '/home/mehmet/Repo-work/sha1_pynq/ip/sha1_hls'.
+INFO: [HLS 200-10] Adding design file 'sha1_hls/sha1_control.c' to the project
+INFO: [HLS 200-10] Adding design file 'sha1_hls/sha1_control.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'sha1_hls/tb_sha1_control.c' to the project
+INFO: [HLS 200-10] Opening solution '/home/mehmet/Repo-work/sha1_pynq/ip/sha1_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [HLS 200-10] Analyzing design file 'sha1_hls/sha1_control.c' ...
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 15331 ; free virtual = 20721
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 15332 ; free virtual = 20722
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 15332 ; free virtual = 20722
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 15332 ; free virtual = 20722
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 494.832 ; gain = 141.371 ; free physical = 15316 ; free virtual = 20706
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 494.832 ; gain = 141.371 ; free physical = 15325 ; free virtual = 20714
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha1_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha1_control'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.03 seconds; current allocated memory: 58.669 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 58.813 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha1_control'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_cs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_we' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_address' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_write' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_cs' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_we' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_address' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_write' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_read' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/i_error' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_read' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha1_control/o_error' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha1_control' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Bundling port 'i_cs', 'i_we', 'i_address', 'i_write', 'o_read' and 'o_error' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha1_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 59.084 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 494.832 ; gain = 141.371 ; free physical = 15319 ; free virtual = 20709
+INFO: [SYSC 207-301] Generating SystemC RTL for sha1_control.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha1_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha1_control.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 27 13:55:25 2019...
+WARNING: [IMPL 213-201] IO timing constraints are not applied without adding IO buffers.
+WARNING: [IMPL 213-201] IO timing constraints are not applied without adding IO buffers.
+INFO: [HLS 200-112] Total elapsed time: 36.64 seconds; peak allocated memory: 59.084 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Jan 27 13:55:44 2019...
