@@ -1,2 +1,0 @@
-sha1_control_AXILiteS_s_axi
-sha1_control
